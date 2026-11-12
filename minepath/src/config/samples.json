@@ -1,0 +1,307 @@
+{
+  "_readme": "ILLUSTRATIVE sample mines with invented activity data and invented scenario sizes. They do not describe any real mine. Credit volumes are sized to each mine's residual emissions so the demo shows a neutrality year; change them freely.",
+  "opencast": {
+    "inputs": {
+      "name": "Illustrative open-cast mine",
+      "mineType": "opencast",
+      "coal": {
+        "value": 1.5,
+        "unit": "Mt"
+      },
+      "diesel": {
+        "value": 22,
+        "unit": "ML"
+      },
+      "equipmentHours": 70000,
+      "equipmentFuelRate": 110,
+      "electricity": {
+        "value": 45,
+        "unit": "GWh"
+      },
+      "explosives": {
+        "value": 6000,
+        "unit": "t"
+      },
+      "methaneOverride": null,
+      "captureAvailable": false,
+      "captureRate": 0,
+      "reclaimedHa": 180,
+      "plantationAge": 3,
+      "soilCarbon": null,
+      "includeSoil": false,
+      "productionGrowthPct": 0,
+      "includeScope3": false
+    },
+    "scenarios": [
+      {
+        "id": "baseline",
+        "name": "Baseline (no new levers)",
+        "locked": true,
+        "levers": {
+          "ev": {
+            "enabled": false,
+            "startYear": 2027,
+            "rampYear": 2035,
+            "adoption": 100
+          },
+          "capture": {
+            "enabled": false,
+            "startYear": 2026,
+            "rampYear": 2030,
+            "adoption": 100
+          },
+          "ppa": {
+            "enabled": false,
+            "startYear": 2027,
+            "rampYear": 2032,
+            "adoption": 100
+          },
+          "afforestation": {
+            "enabled": false,
+            "startYear": 2026,
+            "rampYear": 2034,
+            "adoption": 100,
+            "additionalHa": 400
+          },
+          "credits": {
+            "enabled": false,
+            "startYear": 2033,
+            "rampYear": 2038,
+            "adoption": 100,
+            "volume": 165000
+          }
+        }
+      },
+      {
+        "id": "balanced",
+        "name": "Scenario A \u2014 Balanced",
+        "locked": false,
+        "levers": {
+          "ev": {
+            "enabled": true,
+            "startYear": 2028,
+            "rampYear": 2036,
+            "adoption": 70
+          },
+          "capture": {
+            "enabled": false,
+            "startYear": 2026,
+            "rampYear": 2030,
+            "adoption": 100
+          },
+          "ppa": {
+            "enabled": true,
+            "startYear": 2027,
+            "rampYear": 2033,
+            "adoption": 70
+          },
+          "afforestation": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2034,
+            "adoption": 100,
+            "additionalHa": 400
+          },
+          "credits": {
+            "enabled": true,
+            "startYear": 2034,
+            "rampYear": 2039,
+            "adoption": 100,
+            "volume": 100000
+          }
+        }
+      },
+      {
+        "id": "aggressive",
+        "name": "Scenario B \u2014 Aggressive",
+        "locked": false,
+        "levers": {
+          "ev": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2033,
+            "adoption": 100
+          },
+          "capture": {
+            "enabled": false,
+            "startYear": 2026,
+            "rampYear": 2028,
+            "adoption": 100
+          },
+          "ppa": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2030,
+            "adoption": 100
+          },
+          "afforestation": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2032,
+            "adoption": 100,
+            "additionalHa": 1200
+          },
+          "credits": {
+            "enabled": true,
+            "startYear": 2032,
+            "rampYear": 2037,
+            "adoption": 100,
+            "volume": 70000
+          }
+        }
+      }
+    ]
+  },
+  "underground": {
+    "inputs": {
+      "name": "Illustrative underground mine",
+      "mineType": "underground",
+      "coal": {
+        "value": 1.5,
+        "unit": "Mt"
+      },
+      "diesel": {
+        "value": 2,
+        "unit": "ML"
+      },
+      "equipmentHours": 20000,
+      "equipmentFuelRate": 60,
+      "electricity": {
+        "value": 90,
+        "unit": "GWh"
+      },
+      "explosives": {
+        "value": 1500,
+        "unit": "t"
+      },
+      "methaneOverride": null,
+      "captureAvailable": true,
+      "captureRate": 60,
+      "reclaimedHa": 60,
+      "plantationAge": 2,
+      "soilCarbon": null,
+      "includeSoil": false,
+      "productionGrowthPct": 0,
+      "includeScope3": false
+    },
+    "scenarios": [
+      {
+        "id": "baseline",
+        "name": "Baseline (no new levers)",
+        "locked": true,
+        "levers": {
+          "ev": {
+            "enabled": false,
+            "startYear": 2027,
+            "rampYear": 2035,
+            "adoption": 100
+          },
+          "capture": {
+            "enabled": false,
+            "startYear": 2026,
+            "rampYear": 2030,
+            "adoption": 100
+          },
+          "ppa": {
+            "enabled": false,
+            "startYear": 2027,
+            "rampYear": 2032,
+            "adoption": 100
+          },
+          "afforestation": {
+            "enabled": false,
+            "startYear": 2026,
+            "rampYear": 2034,
+            "adoption": 100,
+            "additionalHa": 400
+          },
+          "credits": {
+            "enabled": false,
+            "startYear": 2033,
+            "rampYear": 2038,
+            "adoption": 100,
+            "volume": 280000
+          }
+        }
+      },
+      {
+        "id": "balanced",
+        "name": "Scenario A \u2014 Balanced",
+        "locked": false,
+        "levers": {
+          "ev": {
+            "enabled": true,
+            "startYear": 2028,
+            "rampYear": 2036,
+            "adoption": 70
+          },
+          "capture": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2030,
+            "adoption": 100
+          },
+          "ppa": {
+            "enabled": true,
+            "startYear": 2027,
+            "rampYear": 2033,
+            "adoption": 60
+          },
+          "afforestation": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2034,
+            "adoption": 100,
+            "additionalHa": 400
+          },
+          "credits": {
+            "enabled": true,
+            "startYear": 2034,
+            "rampYear": 2039,
+            "adoption": 100,
+            "volume": 280000
+          }
+        }
+      },
+      {
+        "id": "aggressive",
+        "name": "Scenario B \u2014 Aggressive",
+        "locked": false,
+        "levers": {
+          "ev": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2033,
+            "adoption": 100
+          },
+          "capture": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2028,
+            "adoption": 100
+          },
+          "ppa": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2030,
+            "adoption": 100
+          },
+          "afforestation": {
+            "enabled": true,
+            "startYear": 2026,
+            "rampYear": 2032,
+            "adoption": 100,
+            "additionalHa": 1200
+          },
+          "credits": {
+            "enabled": true,
+            "startYear": 2032,
+            "rampYear": 2037,
+            "adoption": 100,
+            "volume": 270000
+          }
+        }
+      }
+    ]
+  }
+}
